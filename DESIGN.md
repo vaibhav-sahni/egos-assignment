@@ -94,15 +94,4 @@ make qemu
 # wcl filename1 filename2
 ```
 
-6. Further notes and suggested improvements
-
-- Full line reassembly across block boundaries (improvement for grep) — store a
-  tail fragment across reads and prepend to the next block.
-- Add per-level time quanta tunables and add unit tests / microbenchmarks for
-  MLFQ behavior.
-
-7. Contribution and
-
-
-
 END
