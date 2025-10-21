@@ -1,0 +1,17 @@
+#pragma once
+
+#define BLOCK_SIZE 512
+
+typedef struct block {
+    char bytes[BLOCK_SIZE];
+} block_t;
+
+#define SIZE_2MB             (2 * 1024 * 1024)
+#define EGOS_BIN_DISK_SIZE   SIZE_2MB
+#define FILE_SYS_DISK_SIZE   SIZE_2MB
+#define FILE_SYS_DISK_START  (EGOS_BIN_DISK_SIZE / BLOCK_SIZE)
+#define EGOS_BIN_MAX_NBYTE   (128 * 1024)
+#define SYS_PROC_EXEC_START  (EGOS_BIN_MAX_NBYTE / BLOCK_SIZE) * 1
+#define SYS_TERM_EXEC_START  (EGOS_BIN_MAX_NBYTE / BLOCK_SIZE) * 2
+#define SYS_FILE_EXEC_START  (EGOS_BIN_MAX_NBYTE / BLOCK_SIZE) * 3
+#define SYS_SHELL_EXEC_START (EGOS_BIN_MAX_NBYTE / BLOCK_SIZE) * 4
