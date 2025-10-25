@@ -109,6 +109,12 @@ static void intr_entry(uint id) {
 static void proc_yield() {
     if (curr_status == PROC_RUNNING) proc_set_runnable(curr_pid);
 
+    /* Reset / boost MLFQ priorities if necessary (keyboard boost and periodic
+     * reset). This invokes the helper in grass/process.c which performs a
+     * shell boost when input is pending and a global reset every MLFQ_RESET_PERIOD.
+     */
+    mlfq_reset_level();
+
     /* Student's code goes here (Multiple Projects). */
 
     /* Before selecting the next process, account for any runtime used by
@@ -141,7 +147,7 @@ static void proc_yield() {
      * processes that are sleeping until a future timestamp.
      */
     int next_idx = MAX_NPROCESS;
-    int best_level = 5 + 1;
+    int best_level = 6; /* initialize to worse-than-any MLFQ level (levels are 0..4) */
     ulonglong now = mtime_get();
     for (uint i = 1; i <= MAX_NPROCESS; i++) {
         struct process* p = &proc_set[(curr_proc_idx + i) % MAX_NPROCESS];
