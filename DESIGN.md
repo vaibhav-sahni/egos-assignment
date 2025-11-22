@@ -7,6 +7,11 @@ Members and contributions:
 - Member A: Vaibhav Sahni
 - Member B: Pramag Basantia
 
+Contributions:
+- Pramag: grep/wcl
+- Vaibhav: MLFQ
+
+Github Link: https://github.com/vaibhav-sahni/egos-assignment
 1. Overview
 
 This document describes the changes made to the EGOS-2000 repository in order to
@@ -94,4 +99,4 @@ make qemu
 # wcl filename1 filename2
 ```
 
-END
+
