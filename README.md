@@ -3,7 +3,7 @@ I have only implemented grep, wc-l, and MLFQ scheduling, the rest of the work is
 
 This work was done as part of a course project for a college OS course under Prof. Vivek Kumar at IIITD. My work will be found documented in DESIGN.md.
 
-THE ORIGINAL README FROM THE REPO IS BELOW
+THE ORIGINAL README FROM THE EGOS REPO BY YUNHAO IS BELOW
 --------------------------------------------------------------------------------------------------------------------------------
 📢 The first draft of the [EGOS book](https://egos.fun/book/overview.html) has been released which contains 9 course projects.
 
