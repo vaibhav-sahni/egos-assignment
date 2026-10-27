@@ -1,3 +1,8 @@
+This repository is an enhancement of the EGOS-2000 operating system, made in Cornell university
+I have only implemented grep, wc-l, and MLFQ scheduling, the rest of the work is a direct fork of: https://github.com/yhzhang0128/egos-2000
+
+This work was done as part of a course project for a college OS course.
+--------------------------------------------------------------------------------------------------------------------------------
 📢 The first draft of the [EGOS book](https://egos.fun/book/overview.html) has been released which contains 9 course projects.
 
 ## Vision
